@@ -36,7 +36,15 @@ func MoveFilesToDirs(files []string) (int, error) {
 			continue
 		}
 		sourcePath := filepath.Join(cwd, filename)
+
+		destDir := filepath.Join(cwd, folderName)
+		if _, err := os.Stat(destDir); os.IsNotExist(err) {
+			if err := os.Mkdir(destDir, 0755); err != nil {
+				return numMoved, fmt.Errorf("error creating directory %s: %w", destDir, err)
+			}
+		}
 		destPath := filepath.Join(cwd, folderName, filename)
+
 		if err := os.Rename(sourcePath, destPath); err != nil {
 			return numMoved, fmt.Errorf("error moving file %s to %s: %w", filename, destPath, err)
 		}
