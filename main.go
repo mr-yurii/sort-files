@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	log.Println("\nScript launched.")
+	log.Println("Script launched.")
 	files, err := sort.GetFilesInDir()
 	if err != nil {
 		log.Fatalln(err)
@@ -16,5 +16,5 @@ func main() {
 	if err != nil {
 		log.Fatalln(err)
 	}
-	log.Printf("Script moved %d files to directories.\n", num)
+	log.Printf("Script moved %d files to directories.", num)
 }
