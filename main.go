@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/startstopstep/sort-files/sort"
+	"github.com/mr-yurii/sort-files/sort"
 	"log"
 )
 
