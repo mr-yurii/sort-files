@@ -1,3 +1,3 @@
-module github.com/startstopstep/sort-files
+module github.com/mr-yurii/sort-files
 
 go 1.19
