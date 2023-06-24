@@ -1,3 +1,3 @@
-module github.com/mr-yurii/sort-files
+module sort-files
 
 go 1.19

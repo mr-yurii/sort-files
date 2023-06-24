@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/mr-yurii/sort-files/sort"
 	"log"
+	"sort-files/sort"
 )
 
 func main() {
